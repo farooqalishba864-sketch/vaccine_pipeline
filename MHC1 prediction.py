@@ -58,7 +58,7 @@ if uploaded:
         final.sort_values(by="Strong_Binder", ascending=False, inplace=True)
 
         st.subheader("Prediction Results (Preview)")
-        st.dataframe(final[["Protein","peptide","allele","affinity","Strong_Binder"]].head(50))
+        st.dataframe(final[["Protein-id","epitope","allele","affinity"]].head(50))
 
         st.download_button(
             "Download Full CSV",
